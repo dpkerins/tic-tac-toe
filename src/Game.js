@@ -27,10 +27,16 @@ export default function Game(props) {
   }
 
   return (
-    <div>
-      <div className = "status">{status}</div>
-      <Board squares={squares} onClick={handleClick}/>
-      <button className = "reset" onClick={resetGame}>RESET</button>
+    <div className="game">
+      <div className="row">
+        <div className="status">{status}</div>
+      </div>
+      <div className="row">
+        <Board squares={squares} onClick={handleClick}/>
+      </div>
+      <div className="row">
+        <button className = "reset" onClick={resetGame}>RESET</button>
+      </div>
     </div>
   )
 }
